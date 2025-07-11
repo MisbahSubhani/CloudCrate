@@ -18,8 +18,8 @@ export default function SignupPage() {
     try {
       await axios.post("/api/signup", form);
       router.push("/login");
-    } catch (err: any) {
-      setError(err.response?.data?.message || "Username or Email already Taken. Please try again.");
+    } catch (err: unknown) {
+       setError(err instanceof Error ? err.message : "Username or Email already Taken. Please try again.");
     } finally {
       setIsLoading(false);
     }

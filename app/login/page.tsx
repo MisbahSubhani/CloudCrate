@@ -36,7 +36,8 @@ export default function LoginPage() {
         router.push("/dashboard")
       }
     } catch (err) {
-      setError("An unexpected error occurred. Please try again.")
+      setError("An unexpected error occurred. Please try again.");
+       console.error("Login error:", err);
     } finally {
       setIsLoading(false)
     }
@@ -97,7 +98,7 @@ export default function LoginPage() {
             </h1>
             <h2 className="text-2xl font-semibold text-white mb-2">Welcome back</h2>
             <p className="text-gray-300">
-              Don't have an account?{" "}
+              Don&apos;t have an account?{' '}
               <Link href="/signup" className="font-medium text-purple-300 hover:text-purple-100 transition-colors underline-offset-4 hover:underline">
                 Sign up here
               </Link>

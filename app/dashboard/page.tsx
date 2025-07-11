@@ -24,10 +24,10 @@ export default function Dashboard() {
   const [currentPage, setCurrentPage] = useState(1);
   const docsPerPage = 5;
 
-  useEffect(() => {
-    if (status === "unauthenticated") router.push("/login");
-    if (status === "authenticated") fetchDocuments();
-  }, [status]);
+ useEffect(() => {
+  if (status === "unauthenticated") router.push("/login");
+  if (status === "authenticated") fetchDocuments();
+}, [status, router]); // Add router to dependencies
 
   useEffect(() => {
     const filtered = documents.filter(doc =>
