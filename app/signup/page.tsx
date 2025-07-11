@@ -68,7 +68,7 @@ export default function SignupPage() {
               </div>
             </div>
             <h1 className="text-4xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent mb-2">
-              MyStorage
+              CloudCrate
             </h1>
             <h2 className="text-2xl font-semibold text-white mb-2">Create your account</h2>
             <p className="text-gray-300">
