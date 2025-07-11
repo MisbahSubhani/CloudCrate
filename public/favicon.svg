@@ -1,0 +1,7 @@
+<svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cloud -->
+  <path d="M45 38c5 0 9-4 9-9s-4-9-9-9c-1.1 0-2.2.2-3.2.6A12 12 0 0021 24c-5.5 0-10 4.5-10 10s4.5 10 10 10h24z" fill="#6366F1"/>
+  <!-- Crate (Box) -->
+  <rect x="20" y="38" width="24" height="12" rx="2" fill="#4F46E5"/>
+  <path d="M20 38l12-8 12 8" stroke="#E0E7FF" stroke-width="2"/>
+</svg>
