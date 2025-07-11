@@ -1,12 +1,12 @@
-// app/layout.tsx
-import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 import { AuthProvider } from './AuthProvider';
 
-export const metadata: Metadata = {
-  title: "Cloudcrate",
+export const metadata = {
+  title: 'Cloudcrate',
   icons: {
-    icon: "/favicon.svg", // Change this to your new logo path
+    icon: '/favicon.svg',
   },
 };
 
@@ -14,8 +14,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        {/* Moved SessionProvider to a separate client component */}
         <AuthProvider>{children}</AuthProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
