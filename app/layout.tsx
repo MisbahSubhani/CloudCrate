@@ -1,27 +1,22 @@
 // app/layout.tsx
 import type { Metadata } from 'next';
 import './globals.css';
-import { SessionProvider } from 'next-auth/react';
+import { AuthProvider } from './AuthProvider';
 
 export const metadata: Metadata = {
   title: "Cloudcrate",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.svg", // Change this to your new logo path
   },
 };
 
-// This part must be a Client Component
-function ClientLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <SessionProvider>
-          {children}
-        </SessionProvider>
+        {/* Moved SessionProvider to a separate client component */}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
 }
-
-// Export the ClientLayout as default
-export default ClientLayout;

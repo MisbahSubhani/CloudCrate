@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -27,12 +28,18 @@ export default function Home() {
         >
           <div className="flex items-center gap-4">
         
-            <span className="text-2xl font-bold text-gray-700 dark:text-gray-300">+</span>
+    <Image
+                 src="/favicon.svg"
+                 alt="CloudCrate Logo"
+                 width={50}
+                 height={40}
+                 className="mx-auto mb-2 mt-4"
+               />
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-indigo-400"
             >
-              MyStorage
+               CloudCrate
             </motion.div>
           </div>
           <motion.p

@@ -1,20 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Required for Prisma to work with Next.js
-  experimental: {
-    serverComponentsExternalPackages: ["@prisma/client"],
-  },
+  reactStrictMode: true,
+  swcMinify: true,
   
-  // Optional but recommended for better Prisma performance
+  // Modern way to handle external packages (replaces experimental.serverComponentsExternalPackages)
+  serverExternalPackages: ['@prisma/client'],
+  
+  // Optional webpack optimization for Prisma
   webpack: (config) => {
     config.externals = [...(config.externals || []), '@prisma/client'];
     return config;
   },
-
-  // Other standard Next.js config options can go here
-  reactStrictMode: true,
-  swcMinify: true,
+  
+  // Add any other production optimizations here
+  output: 'standalone', // Recommended for Docker deployments
 };
 
 export default nextConfig;
