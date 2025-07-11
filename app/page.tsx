@@ -92,7 +92,7 @@ export default function Home() {
               whileTap={{ scale: 0.98 }}
               className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-6 rounded-lg font-medium text-lg shadow-md hover:shadow-lg transition-all"
             >
-              Get Started - It's Free
+              Get Started - It&apos;s Free
             </motion.button>
           </Link>
           <Link href="/login" passHref>
